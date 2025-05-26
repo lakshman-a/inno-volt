@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 40px 0;
+      color: #111;
+    }
+
+    .container {
+      max-width: 720px;
+      background: #ffffff;
+      margin: auto;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .header h1 {
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 32px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 20px;
+      font-size: 14px;
+      padding: 20px;
+      background: #f9fbfe;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .metric-card {
+      display: flex;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e0e6ed;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    .metric-left {
+      flex: 2;
+      background: #f9fbfe;
+      text-align: center;
+      padding: 20px;
+    }
+
+
+
+    .metric-right {
+      flex: 3;
+      min-width: 0;
+      padding: 10px;
+      padding-left: 15px;
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .metric-title {
+      letter-spacing: 1px;
+      font-weight: 500;
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 12px;
+    }
+
+
+    .metric-count {
+      font-size: 26px;
+      font-weight: bold;
+      color: #2c7be5;
+    }
+
+    .metric-numbers {
+      font-weight: bold;
+      font-size: 24px;
+      color: #2c7be5;
+      margin-right: 10px;
+    }
+
+    .metric-percent {
+      font-size: 16px;
+      color: #2c7be5;
+      font-size: 22px;
+    }
+
+    .metric-good {
+      color: #2ecc71;
+    }
+
+    /* green */
+    .metric-warn {
+      color: #f39c12;
+    }
+
+    /* orange */
+    .metric-bad {
+      color: #e74c3c;
+    }
+
+    /* red */
+
+    .metric-subtext {
+      font-size: 14px;
+      color: #888;
+      margin-top: 6px;
+    }
+
+    .divider {
+      width: 1px;
+      background-color: #ddd;
+      margin: 0px;
+    }
+
+
+
+    .bullet {
+      margin-bottom: 8px;
+    }
+
+    .good-note {
+
+      color: #206a37;
+      padding: 12px;
+      /* text-align: center; */
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+
+    .cta-button {
+      display: block;
+      text-align: center;
+      background: #2c7be5;
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin: 40px auto 10px auto;
+      width: fit-content;
+
+    }
+
+    .action-title {
+      font-size: 14px;
+      font-weight: bold;
+      color: #e67e22;
+      margin-bottom: 6px;
+    }
+
+    .action-title-info {
+      color: #2c7be5;
+    }
+
+    .action-list {
+      padding-left: 18px;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+
+    .action-list li {
+      margin-bottom: 2px;
+      line-height: 1.4;
+    }
+
+    .more-link {
+      font-size: 13px;
+      margin-top: 3px;
+     
+      color: #2c7be5;
+    }
+
+    .footer {
+      font-size: 12px;
+      text-align: center;
+      color: #999;
+      margin-top: 24px;
+      
+    }
+
+    .footer-links a {
+  color: #1d4ed8; /* Blue-700 */
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+   <!-- Header -->
+<div class="header">
+  <h1>Pre-Sprint Assurance Report – Q2 2025 PitBulls Sprint 4</h1>
+</div>
+
+<!-- Subtitle -->
+<div class="subtitle">
+  Ensure your stories, tests, and executions are compliant before sprint closure (in 2 days).
+</div>
+
+<!-- Sprint Info with Stronger Border -->
+<div style="background: #f9fbfe; border-radius: 12px; padding: 20px 24px; border: 1px solid #d2d9e3; display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; margin-bottom: 28px; line-height: 1.7;">
+
+  <!-- Left Column -->
+  <div style="flex: 1 1 300px;">
+    <div><strong>Squad:</strong> 
+      <a href="https://wfc.portal.com/squads/FB123456" style="text-decoration: none; color: #2c7be5;">
+        FB123456 - Billing / Fees (Core)
+      </a>
+    </div>
+    
+    <div><strong>Jira Project:</strong> 
+      <a href="https://jira.company.com/projects/FAIAI" style="text-decoration: none; color: #2c7be5;">
+        FAIAI
+      </a>
+    </div>
+
+<div>
+  <strong>Apps Linked:</strong> AP123456 +3 in 
+  <a href="https://snow.company.com/apps-linked" style="text-decoration: none; color: #2c7be5;">
+    SNow
+  </a>
+</div>
+  </div>
+
+  <!-- Right Column -->
+  <div style="flex: 1 1 300px;">
+    <div><strong>Board Name:</strong> FB123456 - Billing / Fees (<strong>Scrum</strong>)</div>
+
+    <div><strong>Closing In:</strong> 2 Days 
+      <span style="color: #64748b;">(2025-06-27)</span>
+    </div>
+
+    <div>
+      <strong>Total Stories:</strong> 
+      <a href="https://jira.company.com/issues/?filter=12345" style="text-decoration: none; color: #2c7be5; font-weight: bold; font-size: 16px;"> &nbsp;10</a> 
+      &nbsp;&nbsp;|&nbsp;&nbsp; 
+      <strong>Testable:</strong> 
+      <a href="https://jira.company.com/issues/?filter=67890" style="text-decoration: none; color: #2c7be5; font-weight: bold; font-size: 16px;">&nbsp;5</a>
+    </div>
+  </div>
+</div>
+
+    <!-- STORY COMPLIANCE -->
+    <div class="metric-card">
+      <div class="metric-left">
+        <div class="metric-title">📘 Story Compliance
+          <a href="https://confluence.company.com/story-compliance" title="Learn more about Story Compliance"
+            style="font-size: 13px; text-decoration: none;">🔗</a>
+        </div>
+        <div class="metric-count">
+          <span class="metric-numbers">3 / 5</span>
+          <span class="metric-percent">(60%)</span>
+        </div>
+        <div class="metric-subtext">Stories Compliant </div>
+      </div>
+      <div class="divider"></div>
+      <div class="metric-right">
+        <div class="action-title">⚠️ Action Required - Fix below items to be fully compliant</div>
+        <ul class="action-list">
+          <li>2 stories missing test links</li>
+          <li>1 story lacks acceptance criteria</li>
+          <li>1 story not QA peer reviewed</li>
+        </ul>
+        <div class="more-link">+ See full details in <a href="#">Assure Portal</a></div>
+      </div>
+    </div>
+    <!-- ⚠️ -->
+
+
+    <!-- TEST DEVELOPMENT -->
+    <div class="metric-card">
+      <div class="metric-left">
+        <div class="metric-title">🛠 Test Development
+          <a href="https://confluence.company.com/story-compliance" title="Learn more about Story Compliance"
+            style="font-size: 13px;  text-decoration: none;">🔗</a>
+        </div>
+        <div class="metric-count">
+          <span class="metric-numbers">2 / 10</span>
+          <span class="metric-percent">(20%)</span>
+        </div>
+        <div class="metric-subtext">Test(s) Automated</div>
+        <div class="metric-count" style="margin-top: 12px;">
+          <span class="metric-numbers">5 / 10</span>
+          <span class="metric-percent">(50%)</span>
+        </div>
+        <div class="metric-subtext">Test(s) are In-Good-Order</div>
+      </div>
+      <div class="divider"></div>
+      <div class="metric-right">
+
+        <div class="action-title"><span>⚠️</span> Action Required</div>
+        <ul class="action-list">
+          <li>2 Closed tests lacks proper summary</li>
+          <li>2 Tests lacks steps</li>
+          <li>1 test executed only once + 2 more items</li>
+        </ul>
+
+        <div class="action-title action-title-info">ℹ️ Info – Review suggested items</div>
+        <ul class="action-list">
+          <li>2 stories marked 'Cannot Automate'.</li>
+          <li>2 Tests is still open</li>
+        </ul>
+
+
+
+        <!-- <div class="bullet">⚠️ Automate the remaining 8 tests.</div>
+        <div class="bullet">📄 5 tests are not IGO – fix summaries, steps, or closure.</div> -->
+      </div>
+    </div>
+
+    <!-- TEST EXECUTION -->
+    <div class="metric-card">
+      <div class="metric-left">
+        <div class="metric-title">🚀 Test Execution
+          <a href="https://confluence.company.com/story-compliance" title="Learn more about Story Compliance"
+            style="font-size: 13px; text-decoration: none;">🔗</a>
+        </div>
+        <div class="metric-count">
+          <span class="metric-numbers">35 / 35</span>
+          <span class="metric-percent">(100%)</span>
+        </div>
+        <div class="metric-subtext">Automated Test(s) executed</div>
+      </div>
+      <div class="divider"></div>
+      <div class="metric-right">
+        <div class="good-note">
+          ✅ All set. No action needed!
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <!-- View More Details Button (Border-only style) -->
+      <a href="https://assure.portal/sprint-summary?sprintId=XYZ" style="display: inline-block; border: 1px solid #2c7be5; color: #2c7be5;
+            padding: 8px 18px; border-radius: 6px; font-weight: 600;
+            text-decoration: none; font-size: 14px; margin-right: 20px;">
+        🔍 View More Details
+      </a>
+
+      <!-- Learn More Link -->
+      <a href="https://confluence.company.com/assurance-guide"
+        style="font-size: 14px; color: #1f2937; text-decoration: none;">
+        How to read this report? →
+      </a>
+    </div>
+
+    <div style="text-align: center; padding: 20px 20px; font-size: 13px; color: #555; ">
+
+      <!-- Info line -->
+      <div style="margin-bottom: 20px; color: #64748b;">
+        📘 PY reports are available in the <a href="https://unify.company.com/dashboard"
+          style="color: #2c7be5; text-decoration: none;">Unify Dashboard</a>
+      </div>
+
+      <!-- Link Row -->
+<div class="footer-links" style="text-align: center; margin-top: 20px; margin-bottom: 15px;">
+  <a href="https://assure.portal" style="color: #1d4ed8; text-decoration: none; margin: 0 10px; font-size: 13px;">Assure Portal</a>
+  <a href="/work-intake" style="color: #1d4ed8; text-decoration: none; margin: 0 10px; font-size: 13px;">Work Intake</a>
+  <a href="https://confluence.company.com" style="color: #1d4ed8; text-decoration: none; margin: 0 10px; font-size: 13px;">Confluence</a>
+  <a href="https://teams.microsoft.com" style="color: #1d4ed8; text-decoration: none; margin: 0 10px; font-size: 13px;">Team Channel</a>
+  <a href="mailto:team@company.com" style="color: #1d4ed8; text-decoration: none; margin: 0 10px; font-size: 13px;">Email Us</a>
+  <a href="/faqs" style="color: #1d4ed8; text-decoration: none; margin: 0 10px; font-size: 13px;">FAQs</a>
+</div>
+
+      <!-- Copyright -->
+      <div style="color: #94a3b8;">
+        © 2024 FI Platform Engineering. All rights reserved.
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <!-- <div class="footer">Powered by ASSURE Platform | Sprint Assurance Mailer</div> -->
+  </div>
+</body>
+
+</html>

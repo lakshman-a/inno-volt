@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    /* Your CSS styles as-is */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 th:text="${emailTitle}">Pre-Sprint Assurance Report</h1>
+    </div>
+    <div class="subtitle" th:text="${emailSubtitle}">
+      Fix gaps now to improve your sprint compliance before the window closes.
+    </div>
+
+    <!-- Sprint Info Block -->
+    <div class="info-grid">
+      <div>
+        <strong>Squad:</strong>
+        <a th:href="${squadLink}" th:text="${squadDisplay}">FB123456 - Billing / Fees (Core)</a><br />
+        <strong>Jira Project:</strong>
+        <a th:href="${jiraProjectLink}" th:text="${jiraProjectKey}">FAIAI</a><br />
+        <strong>Apps Linked:</strong>
+        <span th:text="${appsLinked}">AP123456 +3 in </span>
+        <a th:href="${snowLink}">SNow</a>
+      </div>
+      <div>
+        <strong>Board Name:</strong>
+        <span th:text="${boardName}">FB123456 - Billing / Fees (Scrum)</span><br />
+        <strong>Closing In:</strong>
+        <span th:text="${closingInDays}">2 Days</span>
+        (<span th:text="${closingDate}">2025-06-27</span>)<br />
+        <strong>Total Stories:</strong>
+        <a th:href="${totalStoriesLink}" th:text="${totalStories}">10</a>
+        &nbsp;|&nbsp;
+        <strong>Testable:</strong>
+        <a th:href="${testableStoriesLink}" th:text="${testableStories}">5</a>
+      </div>
+    </div>
+
+    <!-- Metric Cards: Each card generated with conditionals -->
+    <div th:each="metric : ${metrics}" class="metric-card">
+      <div class="metric-left">
+        <div class="metric-title" th:text="${metric.title}">Story Compliance</div>
+        <div class="metric-count">
+          <span class="metric-numbers" th:text="${metric.percentage}">60%</span>
+        </div>
+        <div class="metric-subtext" th:text="${metric.subtext}">3 of 5 stories compliant</div>
+      </div>
+      <div class="divider"></div>
+      <div class="metric-right">
+        <div th:if="${#lists.isEmpty(metric.items)}">
+          <div class="good-note">✅ All set. No action needed!</div>
+        </div>
+        <div th:if="${!#lists.isEmpty(metric.items)}">
+          <div class="action-title" th:text="${metric.statusTitle}">⚠️ Action Required</div>
+          <ul class="action-list">
+            <li th:each="item : ${metric.items}" th:text="${item}">Missing test linkage</li>
+          </ul>
+          <div class="more-link">
+            + View more in <a th:href="${assureLink}">Assure Portal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Button -->
+    <div style="text-align: center; margin-top: 40px;">
+      <a th:href="${summaryLink}" class="cta-button">
+        🔍 View More Details
+      </a>
+      <a th:href="${learnMoreLink}" style="font-size: 14px; text-decoration: none;">
+        ❓ What is this report?
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-links">
+        <a th:href="${assureLink}">Assure Portal</a>
+        <a th:href="${workIntakeLink}">Work Intake</a>
+        <a th:href="${confluenceLink}">Confluence</a>
+        <a th:href="${teamChannelLink}">Team Channel</a>
+        <a th:href="mailto:${emailTo}">Email Us</a>
+      </div>
+      <div>© <span th:text="${year}">2024</span> FI Platform Engineering. All rights reserved.</div>
+    </div>
+  </div>
+</body>
+</html>

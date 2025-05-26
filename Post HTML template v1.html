@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 40px 0;
+      color: #111;
+    }
+    .container {
+      max-width: 720px;
+      background: #ffffff;
+      margin: auto;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .header h1 {
+      font-size: 22px;
+      margin: 0;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 32px;
+    }
+    .metric-card {
+      display: flex;
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e0e6ed;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    }
+    .metric-left {
+      flex: 2;
+      background: #f9fbfe;
+      text-align: center;
+      padding: 20px;
+    }
+    .metric-title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: #333;
+    }
+    .metric-percent {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2c7be5;
+    }
+    .metric-subtext {
+      font-size: 14px;
+      color: #888;
+      margin-top: 6px;
+    }
+    .metric-numbers-small {
+      font-size: 13px;
+      color: #999;
+      margin-top: 4px;
+    }
+    .divider {
+      width: 1px;
+      background-color: #ddd;
+    }
+    .metric-right {
+      flex: 3;
+      padding: 15px 20px;
+      font-size: 14px;
+    }
+    .summary-block {
+      padding: 4px 0;
+    }
+    .summary-title-good {
+      font-weight: bold;
+      color: #2ecc71;
+      margin-bottom: 6px;
+    }
+    .summary-title-warn {
+      font-weight: bold;
+      color: #f39c12;
+      margin-bottom: 6px;
+    }
+    .summary-title-bad {
+      font-weight: bold;
+      color: #e74c3c;
+      margin-bottom: 6px;
+    }
+    .summary-list {
+      margin: 0;
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+    .focus-box {
+      background: #fefce8;
+      padding: 16px;
+      margin-top: 24px;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .focus-box strong {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+    .footer-links a {
+      color: #1d4ed8;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 13px;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      font-size: 12px;
+      text-align: center;
+      color: #999;
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Post-Sprint Assurance Summary – Q2 2025 PitBulls Sprint 4</h1>
+    </div>
+    <div class="subtitle">
+      Here’s how your squad performed in the last sprint. Review your results and help your teams grow forward.
+    </div>
+
+    <!-- Story Compliance -->
+    <div class="metric-card">
+      <div class="metric-left">
+        <div class="metric-title">📘 Story Compliance</div>
+        <div class="metric-percent" style="color: #2ecc71;">100%</div>
+        <div class="metric-numbers-small">5 of 5 testable stories compliant</div>
+      </div>
+      <div class="divider"></div>
+      <div class="metric-right">
+        <div class="summary-block">
+          <div class="summary-title-good">✅ Fully Compliant – All OK</div>
+          <ul class="summary-list">
+            <li>All stories were linked to valid tests</li>
+            <li>Acceptance criteria completed on time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Test Development -->
+    <div class="metric-card">
+      <div class="metric-left">
+        <div class="metric-title">🛠 Test Development</div>
+        <div class="metric-percent" style="color: #f39c12;">60%</div>
+        <div class="metric-numbers-small">6 of 10 tests automated</div>
+        <div class="metric-percent" style="margin-top: 12px; color: #f39c12;">70%</div>
+        <div class="metric-numbers-small">7 of 10 tests in good order</div>
+      </div>
+      <div class="divider"></div>
+      <div class="metric-right">
+        <div class="summary-block">
+          <div class="summary-title-warn">🟡 Partially Compliant – Improve next sprint</div>
+          <ul class="summary-list">
+            <li>3 more tests were automatable but not covered</li>
+            <li>Summary and step fixes would raise IGO by 30%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Test Execution -->
+    <div class="metric-card">
+      <div class="metric-left">
+        <div class="metric-title">🚀 Test Execution</div>
+        <div class="metric-percent">60%</div>
+        <div class="metric-numbers-small">18 of 30 automated tests executed</div>
+      </div>
+      <div class="divider"></div>
+      <div class="metric-right">
+        <div class="summary-block">
+          <div class="summary-title-bad">🔴 Needs Attention – Focus area</div>
+          <ul class="summary-list">
+            <li>12 tests did not run in Jenkins pipeline</li>
+            <li>Investigate pipeline gaps or failed triggers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Focus Area -->
+    <div class="focus-box">
+      <strong>🎯 Top 3 Focus Areas for Next Sprint:</strong>
+      <ul class="summary-list">
+        <li>Ensure all automation is triggered via CI pipeline</li>
+        <li>Improve test case summary completeness</li>
+        <li>Close backlog automatable tests</li>
+      </ul>
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="#" style="display: inline-block; border: 1px solid #2c7be5; color: #2c7be5; padding: 8px 18px; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 14px;">
+        📊 View Sprint Summary Details
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; padding: 20px 20px; font-size: 13px; color: #555;">
+      <div style="margin-bottom: 20px; color: #64748b;">
+        📘 For historical insights, check your PY metrics in the <a href="#" style="color: #2c7be5; text-decoration: none;">Unify Dashboard</a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Assure Portal</a>
+        <a href="#">Work Intake</a>
+        <a href="#">Confluence</a>
+        <a href="#">Team Channel</a>
+        <a href="mailto:team@company.com">Email Us</a>
+        <a href="#">FAQs</a>
+      </div>
+      <div style="color: #94a3b8; margin-top: 12px;">
+        © 2024 FI Platform Engineering. All rights reserved.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
